@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Edit Hobby";
+}
+@model Hobby
+<h1 class="text-center mt-5 mb-5">Create a Hobby</h1>
+<div class="mt-5" style="width: 600px; margin:auto;">
+  <form asp-action="EditHobby" asp-controller="Home" asp-route-id="@Model.HobbyId"mehtod="POST">
+    
+    <div class="row">
+      <div class="col-8">
+        <span class="text-danger" asp-validation-for="Name"></span>
+        <div class="form-group">
+          <label asp-for="Name">Name:</label>
+          <input asp-for="Name" type="text" class="form-control" id="Name" placeholder="Enter hobby name" value="@Model.Name">
+        </div>
+        <span class="text-danger" asp-validation-for="Description"></span>
+        <div class="form-group">
+          <label asp-for="Description">Description</label>
+          <textarea asp-for="Description" type="text" class="form-control" id="Description">@Model.Description</textarea>
+        </div>
+      </div>
+      <div class="col-4">
+        
+        <button type="submit" class="btn btn-dark btn-lg" style="margin-top:130px;">Update</button>
+      </div>
+    </div>
+  </form>
+</div>

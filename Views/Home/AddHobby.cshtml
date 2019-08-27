@@ -1,0 +1,16 @@
+@model Association
+
+        <form asp-action="Join" asp-controller="Home" asp-route-id="@Model.HobbyId" method="POST">
+          <div class="form-group">
+            <span class="text-danger" asp-validation-for="Proficiency"></span>
+            <label asp-for="Proficiency">Email address</label>
+            <select asp-for="Proficiency" type="text" class="form-control" id="Proficiency">
+              <option asp-for="Proficiency" value="novice">Novice</option>
+              <option asp-for="Proficiency" value="intermediate">intermediate</option>
+              <option asp-for="Proficiency" value="expert">expert</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-dark btn-lg btn-4">Add to Hobbies</button>
+        </form>
+
+      
